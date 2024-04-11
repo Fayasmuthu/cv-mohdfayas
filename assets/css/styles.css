@@ -1237,7 +1237,7 @@ button:focus {
 }
 
 .dark-vertion .candidatos .parcial .progressBar {
-  background: rgba(199, 198, 198, 0.6);
+  background: rgb(60 60 60 / 60%);
 }
 
 .dark-vertion .mh-progress path:nth-child(1) {
@@ -1821,7 +1821,7 @@ li .fa {
   border-bottom-left-radius: 10px;
   border-top-right-radius: 10px;
   border-bottom-right-radius: 10px;
-  background: #0bceaf;
+  background: #3cdcc2;
   -webkit-transition: 3s all;
   -webkit-animation-duration: 3s;
   -webkit-animation-name: animationProgress;

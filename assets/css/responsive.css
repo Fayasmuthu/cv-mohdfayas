@@ -447,6 +447,9 @@
         -ms-flex-direction: column-reverse;
             flex-direction: column-reverse;
   }
+  .mh-work .mh-experience-deatils .mh-work-item h4{
+    font-size: 15px;
+  }
   .mh-header {
     padding: 0;
   }
@@ -573,4 +576,6 @@
     padding: 60px 0;
   }
 }
+
+
 /*# sourceMappingURL=responsive.css.map */

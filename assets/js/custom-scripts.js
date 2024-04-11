@@ -375,42 +375,92 @@
           }
        });
     
-        function submitForm(){
-          var name = $("#name").val();
-          var email = $("#email").val();
-          var message = $("#message").val();
-          $.ajax({
-              type: "POST",
-              url: "process.php",
-              data: "name=" + name + "&email=" + email + "&message=" + message,
-              success : function(text){
-                  if (text == "success"){
-                      formSuccess();
-                    } else {
-                      formError();
-                      submitMSG(false,text);
-                    }
-                }
-            });
-        }
-        function formSuccess(){
-            $("#contactForm")[0].reset();
-            submitMSG(true, "Message Sent!")
-        }
-    	  function formError(){   
-    	    $("#contactForm").removeClass().addClass('shake animated').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
-    	        $(this).removeClass();
-    	    });
-    	  }
-        function submitMSG(valid, msg){
-          if(valid){
-            var msgClasses = "h3 text-center fadeInUp animated text-success";
-          } else {
-            var msgClasses = "h3 text-center shake animated text-danger";
-          }
-          $("#msgSubmit").removeClass().addClass(msgClasses).text(msg);
-        }
-    
-
+        // function submitForm(){
+        //   var name = $("#name").val();
+        //   var email = $("#email").val();
+        //   var message = $("#message").val();
+        //   $.ajax({
+        //       type: "POST",
+        //       url: "process.php",
+        //       data: "name=" + name + "&email=" + email + "&message=" + message,
+        //       success : function(text){
+        //           if (text == "success"){
+        //               formSuccess();
+        //             } else {
+        //               formError();
+        //               submitMSG(false,text);
+        //             }
+        //         }
+        //     });
+        // }
+        // function formSuccess(){
+        //     $("#contactForm")[0].reset();
+        //     submitMSG(true, "Message Sent!")
+        // }
+    	  // function formError(){   
+    	  //   $("#contactForm").removeClass().addClass('shake animated').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
+    	  //       $(this).removeClass();
+    	  //   });
+    	  // }
+        // function submitMSG(valid, msg){
+        //   if(valid){
+        //     var msgClasses = "h3 text-center fadeInUp animated text-success";
+        //   } else {
+        //     var msgClasses = "h3 text-center shake animated text-danger";
+        //   }
+        //   $("#msgSubmit").removeClass().addClass(msgClasses).text(msg);
+        // }
+        
     
 }(jQuery));
+
+function gotowhatsapp() {
+  var name = document.getElementById("name").value;
+  var l_name = document.getElementById("L_name").value;
+  var email = document.getElementById("email").value;
+  var message = document.getElementById("message").value;
+
+  var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+  if (!name) {
+      alert("Please enter your name.");
+      document.getElementById("name").focus();
+      return;
+  }
+
+  if (!l_name) {
+      alert("Please enter your last name.");
+      document.getElementById("L_name").focus();
+      return;
+  }
+
+  if (!email) {
+      alert("Please enter your email address.");
+      document.getElementById("email").focus();
+      return;
+  } else if (!email.match(emailRegex)) {
+      alert("Please enter a valid email address.");
+      document.getElementById("email").focus();
+      return;
+  }
+
+  if (!message) {
+      alert("Please enter your message.");
+      document.getElementById("message").focus();
+      return;
+  }
+
+  var url =
+      "https://wa.me/916282134481?text=" +
+      "name: " + name + "%0a" +
+      "l_name: " + l_name + "%0a" +
+      "email: " + email + "%0a" +
+      "message: " + message;
+
+  window.open(url, "_blank").focus();
+
+  document.getElementById("name").value = "";
+  document.getElementById("L_name").value = "";
+  document.getElementById("email").value = "";
+  document.getElementById("message").value = "";
+}

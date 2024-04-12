@@ -348,9 +348,22 @@ a:focus {
 }
 
 .btn.btn-fill {
-  background-color: #0bceaf;
+  background-image: linear-gradient(to bottom, #008d93, #006669);
   color: #fff;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.08);
+  transform: translateY(-2px);
+  transition: transform 0.2s, box-shadow 0.2s, background-color 0.2s, color 0.2s; 
 }
+
+/* Hover effect to enhance the 3D look */
+.btn.btn-fill:hover {
+  background-image: linear-gradient(to bottom, #013539, #00575d);
+  color: #7ae7fa;
+  transform: translateY(-4px);
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.1), 0 3px 6px rgba(0, 0, 0, 0.08);
+}
+
+
 
 .btn.left-icon .icon {
   margin-right: 15px;
@@ -1130,7 +1143,7 @@ button:focus {
 }
 
 .dark-vertion .mh-home .mh-header-info .social-icon li .fa:hover {
-  background-color: #fff;
+  background-color: #10404f;
 }
 
 .dark-vertion .page-item.active .page-link {

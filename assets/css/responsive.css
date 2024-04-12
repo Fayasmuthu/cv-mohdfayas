@@ -570,6 +570,12 @@
   }
 }
 
+@media only screen and (min-width: 421px) {
+  .navbar-collapse .social-icon {
+      display: none; /* Hide the social icons */
+  }
+}
+
 @media only screen and (max-width: 420px) {
   .mh-home .img-border {
     height: 280px;
@@ -577,6 +583,35 @@
   }
   .home-padding {
     padding: 60px 0;
+  }
+
+  .navbar-collapse .social-icon {
+      text-align: center;
+      margin-top: 10px;
+  }
+
+  .navbar-collapse .social-icon li {
+      display: inline-block;
+      margin: 0 5px;
+  }
+
+  .navbar-collapse .social-icon li a {
+    display: flex; /* Use flexbox */
+    justify-content: center; /* Center horizontally */
+    align-items: center;
+    width: 40px; /* Set width and height for circle */
+    height: 40px; /* Set width and height for circle */
+    line-height: 40px; /* Centering the icon vertically */
+    border-radius: 50%; /* Make it round */
+    background-color: #008d93; /* Background color of the circle */
+    font-size: 20px;
+    color: #fff;
+    text-align: center; /* Center the icon horizontally */
+    transition: background-color 0.3s ease; /* Smooth transition */
+}
+
+  .navbar-collapse .social-icon li a:hover {
+      color: #008d93; /* Change color on hover */
   }
 }
 

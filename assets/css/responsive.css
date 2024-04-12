@@ -565,6 +565,9 @@
   .text-left.text-xs-center {
     text-align: center !important;
   }
+  .mh-nav {
+    padding-left: 20px;
+  }
 }
 
 @media only screen and (max-width: 420px) {

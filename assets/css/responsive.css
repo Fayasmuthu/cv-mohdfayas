@@ -337,6 +337,16 @@
     padding-top: 50px;
     padding-right: 20px;
   }
+
+  .social-icon-mh-home {
+    position: absolute;
+    top: 100%;
+    left: 44%;
+    transform: translate(-50%, -50%);
+    margin: 0px;
+    padding: 0px;
+    display: flex;
+}
 }
 
 @media only screen and (max-width: 768px) {
@@ -435,6 +445,18 @@
   .mh-single-project-slide-by-side {
     padding-bottom: 30px;
   }
+
+  .social-icon-mh-home {
+    position: absolute;
+    top: 100%;
+    left: 55%;
+    transform: translate(-50%, -50%);
+    margin: 0px;
+    padding: 0px;
+    display: flex;
+}
+
+
 }
 
 @media only screen and (max-width: 575px) {
@@ -492,7 +514,10 @@
     margin-bottom: 50px;
   }
   .section-separator {
-    padding: 30px 0;
+    padding: 50px 0;
+  }
+  .social-icon-mh-home {
+    left: 50%;
   }
   .mh-home .mh-header-info .mh-promo {
     margin-bottom: 20px;
